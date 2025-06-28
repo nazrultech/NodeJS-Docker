@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-let userGoal = 'Teach Docker!';
+let userGoal = 'Basics Docker!';
 
 app.use(
   bodyParser.urlencoded({
@@ -43,4 +43,4 @@ app.post('/store-goal', (req, res) => {
   res.redirect('/');
 });
 
-app.listen(80);
+app.listen(3001);
