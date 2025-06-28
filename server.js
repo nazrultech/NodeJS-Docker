@@ -43,4 +43,4 @@ app.post('/store-goal', (req, res) => {
   res.redirect('/');
 });
 
-app.listen(3000);
+app.listen(3000, '0.0.0.0');
