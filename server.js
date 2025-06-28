@@ -1,17 +1,6 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-
 const app = express();
-
-let userGoal = 'Basics Docker!';
-
-app.use(
-  bodyParser.urlencoded({
-    extended: false,
-  })
-);
-
-app.use(express.static('public'));
+const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.send(`
@@ -22,7 +11,7 @@ app.get('/', (req, res) => {
       <body>
         <section>
           <h2>Docker commands recap</h2>
-          <h3>${userGoal}</h3>
+          <h3>Hello</h3>
         </section>
         <form action="/store-goal" method="POST">
           <div class="form-control">
@@ -36,11 +25,7 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.post('/store-goal', (req, res) => {
-  const enteredGoal = req.body.goal;
-  console.log(enteredGoal);
-  userGoal = enteredGoal;
-  res.redirect('/');
-});
 
-app.listen(3001);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
+});
