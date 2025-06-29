@@ -31,3 +31,39 @@ $(docker ps -a -q) fetches all container IDs. </br>
 Updates local codebase from the remote main branch. </br>
 
 Ensures you're using the latest project code before building or running.</br>
+
+📋 8. docker image ls </br>
+Lists all locally available Docker images. </br>
+
+Displays: </br>
+
+Repository (image name) </br>
+
+Tag (version, like latest) </br>
+
+Image ID </br>
+
+Created time </br>
+
+Size </br>
+
+✅ Use this to see what images are available on your system. </br>
+
+🔍 9. docker image inspect 4112930a531a </br>
+Shows detailed metadata about a specific image using its ID (4112930a531a).</br>
+
+      Outputs a JSON object containing: </br>
+      
+        Configuration info </br>
+      
+        Environment variables </br>
+      
+        Layer history </br>
+      
+        Entrypoint and command </br>
+      
+        File system layers </br>
+
+Architecture and OS </br>
+
+✅ Useful for debugging or understanding how an image is constructed.
