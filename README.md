@@ -87,14 +87,9 @@ Follows live logs (like tail -f) for a running container. </br>
 ✅ Good for real-time monitoring of your container’s output. </br>
 
 14. docker exec </br>
-Executes a command inside a running container. </br>
-✅ Must be used with flags like -it and a command: </br>
+docker exec -it <container_id> /bin/sh </br>
 
-bash
-Copy
-Edit </br>
-docker exec -it <container_id> <command> </br>
-15. docker cp <file-path> <container_id>:<container-path> </br>
+15. docker cp <file-path> <container_id>:<file-path> --vise-versa   </br>
 Copies a file/folder from host to container. </br>
 
 Vice versa: </br>
