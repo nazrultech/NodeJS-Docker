@@ -66,4 +66,47 @@ Shows detailed metadata about a specific image using its ID (4112930a531a).</br>
 
 Architecture and OS </br>
 
-✅ Useful for debugging or understanding how an image is constructed.
+✅ Useful for debugging or understanding how an image is constructed. </br>
+
+10. docker run -d -p 3000:3000 <container_id> </br>
+Runs a container in detached mode (-d) and maps port 3000 on the host to port 3000 in the container. </br>
+
+Allows your app to run in the background. </br>
+✅ Common for running web servers or background services. </br>
+
+11. docker run --help </br>
+Displays help and available options for the docker run command. </br>
+✅ Use this to explore arguments like -v for volumes, -e for environment variables, and more. </br>
+
+12. docker logs <container_id> </br>
+Displays logs from a running or exited container. </br>
+✅ Useful for debugging output or errors from your app. </br>
+
+13. docker logs -f <container_id> </br>
+Follows live logs (like tail -f) for a running container. </br>
+✅ Good for real-time monitoring of your container’s output. </br>
+
+14. docker exec </br>
+Executes a command inside a running container. </br>
+✅ Must be used with flags like -it and a command: </br>
+
+bash
+Copy
+Edit </br>
+docker exec -it <container_id> <command> </br>
+15. docker cp <file-path> <container_id>:<container-path> </br>
+Copies a file/folder from host to container. </br>
+
+Vice versa: </br>
+
+bash
+Copy
+Edit </br>
+docker cp <container_id>:<container-path> <host-path>  </br>
+✅ Useful for injecting configs or retrieving logs/artifacts. </br>
+
+16. docker exec -it <container_id> /bin/sh </br>
+Starts an interactive shell (sh) session inside the container. </br>
+✅ Great for debugging, inspecting files, or making manual changes. </br>
+
+
